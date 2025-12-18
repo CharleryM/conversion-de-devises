@@ -14,7 +14,6 @@ class CurrencySelector extends StatelessWidget {
   Widget build(BuildContext context) {
     final viewmodel = context.watch<CurrencyConverterViewModel>();
 
-    // 🔹 Afficher un loader si les monnaies ne sont pas encore chargées
     if (viewmodel.fromCurrency == null || viewmodel.toCurrency == null) {
       return const Center(child: CircularProgressIndicator());
     }

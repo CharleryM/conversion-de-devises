@@ -91,7 +91,6 @@ class ExchangeRateRepository {
 
       return (rates, dateTime);
     } catch (e) {
-      // Cache corrupted, clear it
       await prefs.remove(_ratesKey);
       await prefs.remove(_timestampKey);
       return null;
