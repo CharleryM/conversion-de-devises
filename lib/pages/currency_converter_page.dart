@@ -49,7 +49,7 @@ class CurrencyConverterPage extends StatelessWidget {
               ),
               child: Row(
                 children: [
-
+                  // INPUT
                   Expanded(
                     child: TextField(
                       keyboardType: TextInputType.number,
@@ -66,7 +66,7 @@ class CurrencyConverterPage extends StatelessWidget {
 
                   const SizedBox(width: 16),
 
-
+                  // RESULTAT
                   Expanded(
                     child: Container(
                       padding: const EdgeInsets.symmetric(
@@ -95,6 +95,7 @@ class CurrencyConverterPage extends StatelessWidget {
 
             const SizedBox(height: 20),
 
+            // TAUX
             if (vm.exchangeRate != null)
               Text(
                 "Taux : ${vm.exchangeRate!.toStringAsFixed(4)}",

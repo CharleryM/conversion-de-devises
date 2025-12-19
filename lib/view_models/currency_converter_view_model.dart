@@ -96,7 +96,7 @@ class CurrencyConverterViewModel extends ChangeNotifier {
     }
 
     _isLoading = false;
-    notifyListeners(); 
+    notifyListeners(); // 🔥 ajout important
   }
 
   Future<void> refreshRates() async {
@@ -112,6 +112,6 @@ class CurrencyConverterViewModel extends ChangeNotifier {
     }
 
     _isLoading = false;
-    notifyListeners(); 
+    notifyListeners(); // 🔥 ajout important
   }
 }

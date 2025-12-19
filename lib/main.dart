@@ -9,6 +9,7 @@ import 'package:go_router/go_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Remplace l'écran noir par un widget lisible en cas d'exception non gérée
   ErrorWidget.builder = (FlutterErrorDetails details) {
     return Material(
       child: Scaffold(
@@ -34,6 +35,7 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
 
+  // Load environment variables
   await dotenv.load(fileName: '.env');
 
   GoRouter.optionURLReflectsImperativeAPIs = true;
